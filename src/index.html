@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order Food Online from Restaurants near you | Fast Delivery with Chowdeck">
+  <title>Chowdeck - Order Food Online | Fast Delivery</title>
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo and Location -->
+        <div class="flex items-center gap-4 sm:gap-6">
+          <div class="w-10 h-10 bg-green-700 rounded-lg flex items-center justify-center hover:bg-green-800 cursor-pointer">
+            <span class="text-yellow-400 font-bold text-2xl">c</span>
+          </div>
+          <div class="flex items-center gap-2 text-gray-700 cursor-pointer hover:text-green-600">
+            <span class="text-green-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span class="font-medium text-sm sm:text-base">Lagos</span>
+            <span><i class="bx bx-chevron-down text-gray-600"></i></span>
+          </div>
+        </div>
+
+        <!-- Search Bar - Hidden on mobile -->
+        <div class="hidden md:flex items-center bg-gray-100 px-4 py-2 rounded-full w-64 lg:w-80">
+          <span class="text-gray-400 mr-2"><i class="bx bx-search"></i></span>
+          <input type="text" placeholder="Search Chowdeck." class="bg-transparent outline-none w-full text-sm">
+        </div>
+
+        <!-- Cart and User Icons -->
+        <div class="flex items-center gap-2 sm:gap-4">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-700 rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-green-800">
+            <i class="bx bx-cart-alt text-sm sm:text-base"></i>
+          </div>
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-700 rounded-full flex items-center justify-center text-white cursor-pointer hover:bg-green-800">
+            <i class="bx bx-user text-sm sm:text-base"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Search Bar -->
+      <div class="mt-4 md:hidden">
+        <div class="flex items-center bg-gray-100 px-4 py-2 rounded-full w-full">
+          <span class="text-gray-400 mr-2"><i class="bx bx-search"></i></span>
+          <input type="text" placeholder="Search Chowdeck." class="bg-transparent outline-none w-full text-sm">
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <!-- Categories Section -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-8 lg:mb-12">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 sm:mb-8 gap-4">
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800">
+          Explore Categories
+        </h2>
+        <button class="bg-green-700 text-white px-4 sm:px-5 py-2 rounded-full flex items-center gap-2 text-sm hover:bg-green-800">
+          Filter <span><i class="bx bx-slider bx-flip-horizontal"></i></span>
+        </button>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-3 lg:gap-4">
+        <!-- Restaurant Category -->
+        <div class="bg-pink-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/image.webp" alt="Restaurants" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">Restaurants</p>
+        </div>
+
+        <!-- Shops Category -->
+        <div class="bg-yellow-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/image (4).webp" alt="Shops" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">Shops</p>
+        </div>
+
+        <!-- Pharmacy Category -->
+        <div class="bg-blue-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/pharmacy.svg" alt="Pharmacy" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">Pharmacy</p>
+        </div>
+
+        <!-- Local Markets Category -->
+        <div class="bg-green-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/image (1).webp" alt="Local Markets" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">Local Markets</p>
+        </div>
+
+        <!-- African Meals Category -->
+        <div class="bg-orange-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/image (2).webp" alt="African Meals" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">African Meals</p>
+        </div>
+
+        <!-- Healthy Category -->
+        <div class="bg-emerald-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/fit-fam.svg" alt="Healthy" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">Healthy</p>
+        </div>
+
+        <!-- Drinks Category -->
+        <div class="bg-amber-100 py-3 sm:py-4 px-2 sm:px-4 rounded-xl text-center hover:shadow-lg hover:scale-105 transition-all cursor-pointer">
+          <div class="text-lg sm:text-xl lg:text-2xl mb-1 sm:mb-2">
+            <img src="./image/image (3).webp" alt="Drinks" class="w-10 h-10 sm:w-12 sm:h-12 mx-auto object-contain">
+          </div>
+          <p class="text-xs sm:text-sm font-medium text-gray-700">Drinks</p>
+        </div>
+      </div>
+    </section>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-7xl">
+    <!-- Promo Banners -->
+    <section class="mb-8 lg:mb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+        <!-- Valentine's Day Banner -->
+        <div class="relative rounded-2xl  bg-[#300759] text-white p-6 sm:p-8 flex items-center hover:shadow-xl transition-all cursor-pointer">
+          <div class="flex-1">
+            <p class="text-sm opacity-80 mb-2">Chowdeck</p>
+            <h2 class="text-lg sm:text-2xl font-semibold leading-snug mb-2">
+              Happy Valentine's <br> Day! Shop Special <br> Deals
+            </h2>
+            <p class="text-xs sm:text-sm opacity-70">
+              Exclusive discounts from Chicken Republic, Item7go, The Place, Burger King and many more
+            </p>
+          </div>
+          <div class="absolute right-0 top-0 h-full w-1/2 flex items-center justify-center">
+            <img src="./image/image.png" alt="Valentine's Day" class=" w-50  object-cover">
+          </div>
+        </div>
+
+        <!-- Relay Banner -->
+        <div class="relative rounded-2xl overflow-hidden bg-[#990038] text-white p-6 sm:p-8 flex items-center hover:shadow-xl transition-all cursor-pointer">
+          <div class="flex-1">
+            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
+              relay
+            </h2>
+            <p class="text-sm sm:text-lg">
+              Send packages easily with relay!
+            </p>
+          </div>
+          <div class="absolute right-0 top-0 h-full w-1/2 flex items-center justify-center justify-end">
+            <img src="./image/coffee.png" alt="Relay" class="w-50 object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Handpicked for you -->
+    <section class="mb-8 lg:mb-12">
+      <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-800 mb-6">
+        Handpicked for you <span class="text-yellow-400"></span>
+      </h2>
+
+      <!-- Restaurant Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <!-- Restaurant Card 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./image/food2.jpeg" alt="Dodo Pizza" class="w-full h-full object-cover image-hover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              
+              <!-- Wishlist Button -->
+              <div class="absolute top-4 left-4 w-9 h-9 bg-yellow-400 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-yellow-400 hover:text-white transition-all cursor-pointer">
+                <i class="bx bx-heart text-sm text-white"></i>
+              </div>
+
+              <!-- Open Status -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-medium tracking-wide bg-black/50 px-3 py-1 rounded-full">
+                  OPENS TODAY AT 9:00AM
+                </p>
+              </div>
+
+              <!-- Discount Badge -->
+              <div class="absolute bottom-4 right-4 bg-white text-xs px-3 py-1.5 rounded-lg shadow font-medium flex items-center gap-2">
+                <span class="text-orange-500">🎁</span>
+                Up to 40% OFF!!!
+              </div>
+
+              <!-- Restaurant Logo -->
+              <div class="absolute bottom-4 left-4 bg-white rounded-lg p-2 shadow">
+                <span class="text-xs font-bold text-green-700">DODO PIZZA</span>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800 text-lg">Dodo Pizza - Alausa</h3>
+                </div>
+                <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <span class="text-sm font-medium text-gray-700">4.10</span>
+                  <i class="bx bxs-star text-yellow-400 text-sm"></i>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-500 mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                25 - 35 mins
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">PIZZA</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">COMBOS</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">SIDES</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Card 2 -->
+          <div class="min-w-[320px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./image/food1.jpeg" alt="OLIVIA JUICES" class="w-full h-full object-cover image-hover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              
+              <!-- Wishlist Button -->
+              <div class="absolute top-4 left-4 w-9 h-9 bg-yellow-400 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-yellow-400 hover:text-white transition-all cursor-pointer">
+                <i class="bx bx-heart text-sm text-white"></i>
+              </div>
+
+              <!-- Open Status -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-medium tracking-wide bg-black/50 px-3 py-1 rounded-full">
+                  OPENS TODAY AT 9:00AM
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800 text-lg">OLIVIA JUICES</h3>
+                </div>
+                <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <span class="text-sm font-medium text-gray-700">4.68</span>
+                  <i class="bx bxs-star text-yellow-400 text-sm"></i>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-500 mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                35 - 45 mins
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">IKEJA GRA</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">SMOOTHIES</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">JUICE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Card 3 -->
+          <div class="min-w-[320px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92" alt="Ace & Ace Kitchen" class="w-full h-full object-cover image-hover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              
+              <!-- Wishlist Button -->
+              <div class="absolute top-4 left-4 w-9 h-9 bg-yellow-400 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-yellow-400 hover:text-white transition-all cursor-pointer">
+                <i class="bx bx-heart text-sm text-white"></i>
+              </div>
+
+              <!-- Open Status -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-medium tracking-wide bg-black/50 px-3 py-1 rounded-full">
+                  OPEN NOW
+                </p>
+              </div>
+
+              <!-- Pre-order Badge -->
+              <div class="absolute bottom-4 right-4 bg-blue-600 text-white text-xs px-3 py-1.5 rounded-lg shadow font-medium">
+                Pre-order
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800 text-lg">Ace & Ace kitchen</h3>
+                </div>
+                <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <span class="text-sm font-medium text-gray-700">4.25</span>
+                  <i class="bx bxs-star text-yellow-400 text-sm"></i>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-500 mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                30 - 40 mins
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">CHICKEN</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">BURGERS</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">MEALS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-8 gap-4 sm:gap-6 lg:gap-8">
+          <!-- Restaurant Card 1 -->
+          <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./image/food3.jpeg" alt="Dodo Pizza" class="w-full h-full object-cover image-hover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              
+              <!-- Wishlist Button -->
+              <div class="absolute top-4 left-4 w-9 h-9 bg-yellow-400 rounded-full flex items-center justify-center shadow hover:bg-yellow-400 hover:text-white transition-all cursor-pointer">
+                <i class="bx bx-heart text-sm text-white"></i>
+              </div>
+
+              <!-- Open Status -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-medium tracking-wide bg-black/50 px-3 py-1 rounded-full">
+                  OPENS TODAY AT 9:00AM
+                </p>
+              </div>
+
+              <!-- Discount Badge -->
+              <div class="absolute bottom-4 right-4 bg-white text-xs px-3 py-1.5 rounded-lg shadow font-medium flex items-center gap-2">
+                <span class="text-orange-500">🎁</span>
+                Up to 40% OFF!!!
+              </div>
+
+              <!-- Restaurant Logo -->
+              <div class="absolute bottom-4 left-4 bg-white rounded-lg p-2 shadow">
+                <span class="text-xs font-bold text-green-700">DODO PIZZA</span>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800 text-lg">Dodo Pizza - Alausa</h3>
+                </div>
+                <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <span class="text-sm font-medium text-gray-700">4.10</span>
+                  <i class="bx bxs-star text-yellow-400 text-sm"></i>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-500 mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                25 - 35 mins
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">PIZZA</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">COMBOS</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">SIDES</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Card 2 -->
+          <div class="min-w-[320px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./image/food1.jpeg" alt="OLIVIA JUICES" class="w-full h-full object-cover image-hover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              
+              <!-- Wishlist Button -->
+              <div class="absolute top-4 left-4 w-9 h-9 bg-yellow-400 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-yellow-400 hover:text-white transition-all cursor-pointer">
+                <i class="bx bx-heart text-sm text-white"></i>
+              </div>
+
+              <!-- Open Status -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-medium tracking-wide bg-black/50 px-3 py-1 rounded-full">
+                  OPENS TODAY AT 9:00AM
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800 text-lg">OLIVIA JUICES</h3>
+                </div>
+                <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <span class="text-sm font-medium text-gray-700">4.68</span>
+                  <i class="bx bxs-star text-yellow-400 text-sm"></i>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-500 mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                35 - 45 mins
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">IKEJA GRA</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">SMOOTHIES</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">JUICE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Restaurant Card 3 -->
+          <div class="min-w-[320px] sm:min-w-[340px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all hover-lift">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92" alt="Ace & Ace Kitchen" class="w-full h-full object-cover image-hover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              
+              <!-- Wishlist Button -->
+              <div class="absolute top-4 left-4 w-9 h-9 bg-yellow-400 backdrop-blur rounded-full flex items-center justify-center shadow hover:bg-yellow-400 hover:text-white transition-all cursor-pointer">
+                <i class="bx bx-heart text-sm text-white"></i>
+              </div>
+
+              <!-- Open Status -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <p class="text-white text-sm font-medium tracking-wide bg-black/50 px-3 py-1 rounded-full">
+                  OPEN NOW
+                </p>
+              </div>
+
+              <!-- Pre-order Badge -->
+              <div class="absolute bottom-4 right-4 bg-blue-600 text-white text-xs px-3 py-1.5 rounded-lg shadow font-medium">
+                Pre-order
+              </div>
+            </div>
+
+            <div class="p-4">
+              <div class="flex justify-between items-start mb-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800 text-lg">Ace & Ace kitchen</h>
+                </div>
+                <div class="flex items-center gap-1 bg-green-50 px-2 py-1 rounded">
+                  <span class="text-sm font-medium text-gray-700">4.25</span>
+                  <i class="bx bxs-star text-yellow-400 text-sm"></i>
+                </div>
+              </div>
+
+              <p class="text-sm text-gray-500 mb-3 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                30 - 40 mins
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">CHICKEN</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">BURGERS</span>
+                <span class="text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full font-medium">MEALS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-12 sm:py-16">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <!-- Logo -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-green-700 rounded-full flex items-center justify-center">
+              <span class="text-white font-bold text-lg">C</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-semibold text-green-800">
+              Chowdeck
+            </h2>
+          </div>
+          <p class="text-gray-600 text-sm">
+            Your favorite food delivery app, bringing restaurants to your doorstep.
+          </p>
+        </div>
+
+        <!-- Locations -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+            Locations
+          </h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a href="#" class="hover:text-green-600">Lagos</a></li>
+            <li><a href="#" class="hover:text-green-600">Abuja</a></li>
+            <li><a href="#" class="hover:text-green-600">Port Harcourt</a></li>
+            <li><a href="#" class="hover:text-green-600">Ibadan</a></li>
+            <li><a href="#" class="hover:text-green-600">Kano</a></li>
+          </ul>
+        </div>
+
+        <!-- Download -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+            Download
+          </h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a href="#" class="hover:text-green-600">Google Play Store</a></li>
+            <li><a href="#" class="hover:text-green-600">iOS App Store</a></li>
+          </ul>
+        </div>
+
+        <!-- Get Help -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+            Get Help
+          </h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a href="mailto:hello@chowdeck.com" class="hover:text-green-600">Email Support</a></li>
+            <li><a href="#" class="hover:text-green-600">FAQ</a></li>
+            <li><a href="#" class="hover:text-green-600">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+            Legal
+          </h4>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li><a href="#" class="hover:text-green-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-green-600">Terms of Use</a></li>
+            <li><a href="#" class="hover:text-green-600">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="border-t border-gray-200 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-gray-600 text-sm">
+          © 2024 Chowdeck. All rights reserved.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-400 hover:text-green-600">
+            <i class="bx bxl-facebook text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-green-600">
+            <i class="bx bxl-instagram text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-green-600">
+            <i class="bx bxl-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-green-600">
+            <i class="bx bxl-linkedin text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
